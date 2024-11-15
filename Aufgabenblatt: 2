@@ -1,0 +1,72 @@
+#Eingabeteil:
+v = []
+
+print("Zahlen eingeben für Liste. Stopp bei 'ENDE'.")
+while True:
+    eingabe = input("Eingabe: ")
+    if eingabe == "ENDE":
+        break
+    else:
+        zahl = float(eingabe)
+        v.append(zahl)
+#Aufgabe 1:
+w = list(v)
+w[0] = w[0] * 2 + 1
+print("Liste v: "+str(v))
+print("Liste w: "+str(w))
+
+#Aufgabe 2:
+z = []
+y = 0
+while True:
+    x = v[y]
+    y += 1
+    polynom = (x**2 + 3 * x - 2)
+    z.append(polynom)
+    if y >= len(v):
+        break
+print("Liste z: "+str(z))
+
+#Aufgabe 3:
+u = []
+h = 0
+while True:
+    i = v[h] + z[h]
+    u.append(i)
+    h += 1
+    if h >= len(v or z):
+        break
+print("Liste u: "+str(u))
+
+#Aufgabe 4:
+a = 0
+j = 0
+while True:
+    j = u[a] + j
+    a += 1
+    if len(u) <= a:
+        break
+print("Summe der Liste u: "+str(j))
+
+#Aufgabe 5:
+b = sorted(u)
+if len(u) % 2 == 0:
+    m = float((u[(int(len(b) / 2))-1] + u[int((len(b) / 2))]) / 2)
+else:
+    m = u[int((len(b) // 2))]
+print("Der Median von u ist: "+str(m))
+d = (j / len(u))
+import math
+abgeschnitten = math.floor(d * 100) / 100
+print("Der Durchschnitt von u ist: "+str(abgeschnitten))
+
+#Aufgabe 6:
+dz = []
+i = 0
+while True:
+    k = z[int(i)] - z[int(i+1)]
+    dz.append(k)
+    i += 1
+    if len(z) <= i+1:
+        break
+print("Liste dz: "+str(dz))
